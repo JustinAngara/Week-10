@@ -4,25 +4,33 @@ let email = document.getElementById('email-add');
 let numberId=0;
 
 btn.addEventListener("click", function() {
-    numberId=createTable(first,last,email,numberId+1);
-    first.value="";
-    last.value="";
-    email.value="";
+    numberId=createTable([first,last,email],numberId+1);
+
 });
 
+function clearTable(elements){
+    elements.map(a=>a.value="");
+}
 
 
-function createTable(f,l,e,numberId){
+function addRows(x){
+    let strTemp = "";
+    x.map(a=>
+        strTemp+= "\n<td>"+a.value+"</td>"   
+    );
+    return strTemp;
+}
+
+function createTable(x,numberId){
     let table=`
     <tr>
-        <th scope="row">${numberId}</th>
-        <td>${f.value}</td>
-        <td>${l.value}</td>
-        <td>${e.value}</td>
+        <th scope="row">${numberId}</th>`+addRows(x)+`
     </tr>
     `;
 
     $('table').append(table);
+    
+    clearTable(x);
 
     return numberId++;
 }
