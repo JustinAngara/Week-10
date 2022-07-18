@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <title>Week 10 project</title>
+    
+
+</head>
+<body>
+    
+    <table class="table table-dark table-striped container">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Email</th>
+            </tr>
+        </thead>
+
+        <tbody id="current-table">
+            
+        </tbody>
+    </table>
+
+
+    <form class="container">
+        <div class="row">
+            <div class="col">
+                <input id="first-name" type="text" class="form-control" placeholder="First name">
+            </div>
+            
+            <div class="col">
+                <input id="last-name" type="text" class="form-control" placeholder="Last name">
+            </div>
+
+            <div class="col">
+                <input id="email-add" type="text" class="form-control" placeholder="Email address">
+            </div>
+        </div>
+        <br><button id="btn" type="button" class="btn btn-outline-dark">Submit</button>
+    </form>
+
+
+
+    <script src="index.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+</body>
+</html>
